@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Al Injaz | Premium Language Program</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1d2b67",
+                        "accent-gold": "#CDA744",
+                        "gold": "#C5A059",
+                        "gold-light": "#EEDCB3",
+                        "accent": "#D4AF37",
+                        "sand-light": "#F9F7F2",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#13151f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #EEDCB3 100%);
+        }
+
+        .blue-gradient-overlay {
+            background: linear-gradient(to bottom, rgba(29, 43, 103, 0.02), rgba(29, 43, 103, 0.05));
+        }
+
+        .timeline-connector {
+            background: repeating-linear-gradient(90deg, #1d2b67, #1d2b67 4px, transparent 4px, transparent 8px);
+        }
+
+        .comparison-highlight {
+            box-shadow: 0 10px 30px -10px rgba(29, 43, 103, 0.2);
+        }
+
+        /* FAQ Accordion Styles */
+        .faq-item input[type="checkbox"] {
+            display: none;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item input[type="checkbox"]:checked~.faq-content {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item input[type="checkbox"]:checked~label .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-primary dark:text-gray-100 antialiased">
+
+    <!-- Navigation -->
+    <nav
+        class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 dark:border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Al Injaz Logo" class="h-12 w-auto" />
+                <span class="font-extrabold text-xl tracking-tight text-primary dark:text-white uppercase">Al <span
+                        class="text-accent-gold">Injaz</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium">
+                <a class="hover:text-accent-gold transition-colors cursor-pointer" href="#program">Program</a>
+                <a class="hover:text-accent-gold transition-colors cursor-pointer" href="#testimonials">Testimonials</a>
+                <a class="hover:text-accent-gold transition-colors cursor-pointer" href="#faq">FAQ</a>
+                <a class="bg-primary text-white px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+                    href="https://tally.so/r/RGPZrl" target="_blank">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-20 pb-24 overflow-hidden">
+        <!-- Decorative Background Element -->
+        <div
+            class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-sand-light dark:bg-primary/5 rounded-l-[100px] hidden lg:block">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-gold/10 text-accent-gold font-semibold text-sm tracking-wide uppercase">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-gold opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-gold"></span>
+                    </span>
+                    Enrollment Now Open
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] text-primary dark:text-white">
+                    You're Crushing It at Work. <br />
+                    <span class="text-accent-gold">But You're Still the Outsider.</span>
+                </h1>
+                <p class="text-xl text-primary/70 dark:text-gray-400 max-w-xl leading-relaxed">
+                    A premium 90-day language program designed specifically for UAE-based professionals. Master the
+                    nuances of Emirati Arabic with just <span class="font-bold text-primary dark:text-white">15 minutes
+                        of daily commitment.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <a class="inline-flex items-center justify-center px-8 py-4 bg-accent-gold text-white font-bold text-lg rounded-xl hover:bg-accent-gold/90 transition-all transform hover:-translate-y-1 shadow-xl shadow-accent-gold/30 group"
+                        href="https://tally.so/r/RGPZrl" target="_blank">
+                        Get Your Seat
+                        <span
+                            class="material-icons ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                    <div class="space-y-1">
+                        <p class="text-sm font-semibold text-primary dark:text-white">Next cohort: March 3, 2026</p>
+                        <p class="text-sm text-primary/60 dark:text-gray-500">• Limited to 30 students only</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-primary/20">
+                    <img alt="Dubai Business District" class="w-full h-full object-cover"
+                        data-alt="Modern high-rise buildings and corporate skyline in Dubai" src="home.jpeg" />
+                </div>
+                <!-- Float Card -->
+                <div
+                    class="absolute -bottom-6 -left-6 bg-white dark:bg-background-dark p-6 rounded-xl shadow-2xl border border-primary/5 max-w-[280px]">
+                    <div class="flex items-center gap-4 mb-3">
+                        <div class="flex text-accent-gold">
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                            <span class="material-icons text-sm">star</span>
+                        </div>
+                        <span class="text-xs font-bold text-primary/40 uppercase">Elite Program</span>
+                    </div>
+                    <p class="text-sm font-medium italic text-primary/80 dark:text-gray-300">"The missing link in my
+                        professional journey in the UAE."</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Social Proof Banner -->
+    <section class="py-12 bg-white dark:bg-primary/10 border-y border-primary/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="bg-sand-light/50 dark:bg-white/5 rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-12 border border-accent-gold/10">
+                <div class="relative flex-shrink-0">
+                    <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img alt="Marcus T." class="w-full h-full object-cover" data-alt="..." src="pfp.png" />
+                    </div>
+                    <div
+                        class="absolute -bottom-2 -right-2 bg-accent-gold w-8 h-8 rounded-full flex items-center justify-center text-white border-2 border-white">
+                        <span class="material-icons text-sm">format_quote</span>
+                    </div>
+                </div>
+                <div class="flex-grow text-center lg:text-left space-y-4">
+                    <p class="text-2xl lg:text-3xl font-medium leading-tight text-primary dark:text-gray-100 italic">
+                        "After years of being 'the expat director,' I'm finally part of the conversation. Last week, my
+                        manager invited me to lunch with his family—all because I spoke their dialect."
+                    </p>
+                    <div>
+                        <h4 class="font-bold text-primary dark:text-white">Marcus T.</h4>
+                        <p class="text-primary/60 dark:text-gray-400 font-medium">Sales Director, Multi-National Firm
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-24 bg-background-light dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <h2 class="text-accent-gold font-bold uppercase tracking-widest text-sm">The Reality Check</h2>
+                <h3 class="text-4xl lg:text-5xl font-extrabold text-primary dark:text-white">The Invisible Barrier to
+                    Your Growth.</h3>
+                <p class="text-lg text-primary/60 dark:text-gray-400">Hard work alone isn't enough in the Majlis or the
+                    boardroom. If you can't connect, you're at risk.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Problem 1 -->
+                <div
+                    class="bg-white dark:bg-white/5 p-10 rounded-2xl shadow-sm border border-primary/5 hover:border-accent-gold/30 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                        <span
+                            class="material-icons text-3xl text-primary dark:text-accent-gold group-hover:text-white">work_history</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-primary dark:text-white">Career Anxiety</h4>
+                    <p class="text-primary/70 dark:text-gray-400 leading-relaxed">
+                        Expat professionals often find their growth capped. Without the local dialect, you miss the
+                        subtle negotiations and informal decisions that happen outside of formal English meetings.
+                    </p>
+                </div>
+                <!-- Problem 2 -->
+                <div
+                    class="bg-white dark:bg-white/5 p-10 rounded-2xl shadow-sm border border-primary/5 hover:border-accent-gold/30 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                        <span
+                            class="material-icons text-3xl text-primary dark:text-accent-gold group-hover:text-white">groups</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-primary dark:text-white">Social Isolation</h4>
+                    <p class="text-primary/70 dark:text-gray-400 leading-relaxed">
+                        Living in the UAE for years but only knowing your expat bubble? The cultural richness of the
+                        region remains locked behind a linguistic door you haven't opened yet.
+                    </p>
+                </div>
+                <!-- Problem 3 -->
+                <div
+                    class="bg-white dark:bg-white/5 p-10 rounded-2xl shadow-sm border border-primary/5 hover:border-accent-gold/30 transition-all group">
+                    <div
+                        class="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                        <span
+                            class="material-icons text-3xl text-primary dark:text-accent-gold group-hover:text-white">lock_open</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-primary dark:text-white">Cultural Gap</h4>
+                    <p class="text-primary/70 dark:text-gray-400 leading-relaxed">
+                        Understanding "Khaleeji" values is the difference between being a guest and being a trusted
+                        partner. Without the language, you are always just a visitor in their home.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-20 text-center">
+                <div class="inline-block p-1 bg-white dark:bg-white/5 rounded-2xl border border-primary/5">
+                    <div class="px-8 py-6 rounded-xl bg-sand-light dark:bg-primary/20 border border-accent-gold/20">
+                        <p class="text-primary font-bold dark:text-white">Stop being the outsider. Start your
+                            transformation today.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="program" class="py-24 px-6 lg:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-gold font-semibold tracking-widest uppercase text-sm mb-4 block">The Mastery
+                Advantage</span>
+            <h2 class="text-4xl lg:text-5xl font-bold text-primary dark:text-white mb-6">Why Emirati Arabic is your
+                ultimate career asset</h2>
+            <p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400">Move beyond survival Arabic. Unlock
+                the nuances of the dialect that opens doors to the highest levels of UAE society and business.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Career Protection -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4">
+                    <span
+                        class="inline-flex items-center justify-center bg-gold/10 text-gold rounded-full px-3 py-1 text-sm font-bold border border-gold/20">
+                        Top Result
+                    </span>
+                </div>
+                <div
+                    class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/30 text-primary dark:text-gold">
+                    <span class="material-icons">verified_user</span>
+                </div>
+                <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Career Protection</h3>
+                <div class="mb-6">
+                    <span class="text-5xl font-extrabold text-gold leading-none">25.3%</span>
+                    <p class="text-sm font-medium text-slate-500 mt-2 uppercase tracking-tighter">Higher retention
+                        likelihood</p>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">UAE-based professionals who speak the local dialect
+                    see significant increases in promotion speed and long-term job security within government and
+                    semi-government sectors.</p>
+                <div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+                    <p class="text-xs italic text-slate-400">Based on 2023 UAE Regional Labour Market Analysis</p>
+                </div>
+            </div>
+            <!-- Card 2: Instant Respect -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                <div
+                    class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/30 text-primary dark:text-gold">
+                    <span class="material-icons">auto_awesome</span>
+                </div>
+                <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Instant Respect</h3>
+                <div class="relative mb-8 pt-4">
+                    <span class="material-icons text-gold/30 absolute -top-2 -left-2 scale-150">format_quote</span>
+                    <p class="italic text-lg text-slate-700 dark:text-slate-300 relative z-10 leading-relaxed">
+                        "Speaking the dialect isn't just about words; it's about belonging. It transforms you from a
+                        visitor to a stakeholder in our culture."
+                    </p>
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+                            <img class="w-full h-full object-cover"
+                                data-alt="Portrait of a distinguished Emirati professional" src="pfp.png" />
+                        </div>
+                        <div>
+                            <p class="font-bold text-primary dark:text-gold text-sm">Khairat Almazrui</p>
+                            <p class="text-xs text-slate-500">Cultural Consultant</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-slate-600 dark:text-slate-400">The gateway to Majlis culture. When you speak Emirati, you
+                    aren't just communicating; you're showing profound respect for the heritage of your hosts.</p>
+            </div>
+            <!-- Card 3: Finally Feel At Home -->
+            <div
+                class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div
+                    class="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 dark:bg-primary/30 text-primary dark:text-gold">
+                    <span class="material-icons">home</span>
+                </div>
+                <h3 class="text-2xl font-bold text-primary dark:text-white mb-4">Finally Feel At Home</h3>
+                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">Breaking the "Expat Bubble" requires
+                    more than just living here. It requires the linguistic tools to navigate daily life like a local.
+                </p>
+                <div class="bg-primary/5 dark:bg-primary/20 rounded-lg p-4 mb-4 border-l-4 border-gold">
+                    <p class="text-sm text-slate-700 dark:text-slate-300">
+                        Join the ranks of cultural icons like <span class="font-bold text-primary dark:text-gold">Max of
+                            Arabia</span>, who bridge the gap between global backgrounds and local traditions through
+                        language mastery.
+                    </p>
+                </div>
+                <div class="mt-auto">
+                    <img class="rounded-lg w-full h-32 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        data-alt="Traditional Emirati gathering space at sunset"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGqWP9O8VlXwgR-9l1JPHLHXmllVZNpEBtpX1or9S8_FAQnj2BW8xeNHontMLe-farLi3JLq0Con68Zhrcrkx_F060FWYlBhgOq1TjexKGlfrPpZ7wgzH20Ob9uTMm1l9bY7K1IcmbX3M74_GyVJyW7hn4m93p51rzFg4nOA7wDcmAfARWNAP8iGN4Mnkw69fhcKpNEIxh5L3rM5MqF98s3zHbZ5uOqv9YNzcEnKVe4bCvcUlOfBk4JJOv24MSuYsJBG7CooRrhbw" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purpose Section -->
+    <section class="py-24 bg-primary/5 dark:bg-slate-950/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left Column: The 'Why' -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-primary dark:text-white mb-6 leading-tight">
+                        Why Modern Standard Arabic (MSA) is holding you back
+                    </h2>
+                    <div class="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        <p>
+                            Most language programs teach you "Fus'ha" (MSA). While perfect for reading Al-Jazeera or
+                            legal documents, it sounds stiff, formal, and disconnected in a 1-on-1 business meeting or a
+                            casual gathering in Dubai or Abu Dhabi.
+                        </p>
+                        <p class="font-medium text-primary dark:text-slate-200">
+                            For time-starved professionals, learning a dialect you'll never use in conversation is a
+                            wasted investment.
+                        </p>
+                        <ul class="space-y-4 pt-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-gold mt-1">check_circle</span>
+                                <span><strong class="text-primary dark:text-white">Built for Professionals:</strong>
+                                    Skip the academic fluff. Learn the phrases that win negotiations and build
+                                    friendships.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-gold mt-1">check_circle</span>
+                                <span><strong class="text-primary dark:text-white">Cultural Context:</strong> Understand
+                                    the etiquette behind the words. Knowing when to speak is as important as what to
+                                    say.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-icons text-gold mt-1">check_circle</span>
+                                <span><strong class="text-primary dark:text-white">Efficiency First:</strong> Our 90-day
+                                    program is designed to fit around your high-pressure schedule.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-10">
+                        <a href="https://tally.so/r/RGPZrl" target="_blank"
+                            class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-lg shadow-lg transition-transform hover:-translate-y-1">
+                            Secure Your Career Now
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Column: Visual Infographic -->
+                <!-- Right Column: Visual Infographic -->
+                <div class="lg:w-1/2 w-full">
+                    <div
+                        class="relative p-4 md:p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800">
+                        <div class="p-4 md:p-8">
+                            <h4
+                                class="text-center text-primary dark:text-gold font-bold mb-6 md:mb-8 uppercase tracking-widest text-sm md:text-base">
+                                The Dialect Advantage</h4>
+                            <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
+                                <div
+                                    class="text-center p-4 md:p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+                                    <p class="text-xs md:text-sm font-bold text-slate-400 mb-2 uppercase">MSA (Formal)
+                                    </p>
+                                    <p class="text-lg md:text-2xl font-bold text-slate-400">The News</p>
+                                    <p class="text-[10px] md:text-xs text-slate-500 mt-2">Best for reading &amp; formal
+                                        speeches</p>
+                                </div>
+                                <div
+                                    class="text-center p-4 md:p-6 bg-primary/10 dark:bg-gold/10 rounded-xl border-2 border-gold shadow-sm">
+                                    <p class="text-xs md:text-sm font-bold text-gold mb-2 uppercase">Emirati (Local)</p>
+                                    <p class="text-lg md:text-2xl font-bold text-primary dark:text-white">The Boardroom
+                                    </p>
+                                    <p
+                                        class="text-[10px] md:text-xs text-slate-600 dark:text-slate-300 mt-2 font-medium">
+                                        Best for relationships &amp; trust</p>
+                                </div>
+                            </div>
+                            <div
+                                class="relative aspect-video rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 group mb-6 md:mb-8">
+                                <div
+                                    class="absolute inset-0 bg-primary/20 mix-blend-multiply transition-opacity group-hover:opacity-10">
+                                </div>
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Stylized gold map of the United Arab Emirates highlighting the 7 Emirates"
+                                    data-location="United Arab Emirates"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxHw_lcqqLpMsTVNG1FPQGBEepXkuKsK70IS4xsAmS6-Ezgjfqn9r0C8SGUo2nrcnWN8Y06R67pSLQH1mhGpbyBAkKqQqhDat5NdZFxF-KHdduPt9CAzaZBshSUGVINsKjFjigV1y_MMalgSngd6IbPnaFjUJS5Ip2Xw73nVeIZgauXaPzO3XoMorbJmCcAlLwiNX3xGHBczsW8hkYkufBS3owIT0_o1hALJWtKDVI6yHJwMWYzPT--QAJZZCdP8mqZvMhiULqzko" />
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div
+                                        class="bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 md:px-6 py-3 md:py-4 rounded-lg shadow-xl border border-gold/30">
+                                        <p
+                                            class="text-primary dark:text-gold font-bold text-center text-xs md:text-base">
+                                            Unified Across the 7 Emirates</p>
+                                        <div class="flex justify-center gap-1 mt-2">
+                                            <span class="w-2 h-2 rounded-full bg-gold"></span>
+                                            <span class="w-2 h-2 rounded-full bg-gold/60"></span>
+                                            <span class="w-2 h-2 rounded-full bg-gold/40"></span>
+                                            <span class="w-2 h-2 rounded-full bg-gold/20"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 px-2 md:px-4">
+                                <div class="flex -space-x-3">
+                                    <img alt="User"
+                                        class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white dark:border-slate-900"
+                                        data-alt="Professional user profile"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbh3pINiwwUq_yJvA4NSBXrjCmyovu1zdkHerduljSdK32iYNED0HwCDHrjmkhmlDykXUQn9Whr1sCVb6IZJKAAJ7RRAybSJeYdaBgmYRyxOHfcckYUNI7wOnS7Y7gv5Xm77GGxBZuNe_nCQUCC15SYHPRenGpOyLhrRmtXZkeI5HW92zYUJy06ThTlQT7NseGL0Jz-q6WygLaeHY3cv6C79pUC7iXfFwd3MyxUc2u-u24J82ezC8AJDTgeXRifW9_SP8oITcF_EI" />
+                                    <img alt="User"
+                                        class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white dark:border-slate-900"
+                                        data-alt="Professional user profile"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeW9fJ53PB8BSVJf5IsjMIIHAuTm-AHTNd5U2-qOFq2keYAh0rFmAhFRBwQFCAksrTMVOcoZn62JKYzahfighW52FMHAiQQ5Tu9DOUfTk3sMwcfQtN7eENr0ovKY5a-BnXfv97_ThoC-YQ4v6mIqHjNgzxuffNTpXFcUvZ_CDQobyKyZIry_rLaUdJFWxVKw-BjpkEPZ1VtrkTuUXnk4uNQxCdkg25CZf2CGUB6wT8-KIf9L0CK-IUdeKqo5cbcnrj5vCGYqm2PbY" />
+                                    <img alt="User"
+                                        class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white dark:border-slate-900"
+                                        data-alt="Professional user profile"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6llsb4yxOGI4Rlmw0210j_6vBNhOiue_ebvC9IB6RJTrocQPJAyqJtM0IFas2-mWdcNONbXv5mXu1pfSjwjODSe0xs1oeiGme_zqAkPSou6ZtKuLKPoMozb5oBKeXF4VvX6WTgtHDjNHLEC-qZX_gOfyWsLVFRWvg2fqqglff4ze4KAaRDgMDBPnn7DGW8jOuvWEpMsTmeKT8jWuqvSTXI3Y403-lCu09DK6Ddxf0TDDcBHaOXYYPNuEdU0brNSFVgfs334HpBPg" />
+                                    <div
+                                        class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white dark:border-slate-900 bg-gold flex items-center justify-center text-[10px] md:text-[10px] font-bold text-white">
+                                        +240</div>
+                                </div>
+                                <p class="text-xs md:text-sm text-slate-500 font-medium text-center sm:text-left">
+                                    Trusted by UAE Executives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section: Timeline -->
+    <section class="py-20 overflow-hidden bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-primary dark:text-blue-400 font-bold tracking-widest uppercase text-sm mb-3">Our
+                    Framework</h2>
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">The 90-Day Mastery Method
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    A structured, high-intensity program designed for UAE professionals to move from zero to
+                    conversational fluency in local Emirati Arabic.
+                </p>
+            </div>
+            <div class="relative">
+                <!-- Desktop Timeline Track -->
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 timeline-connector opacity-20 -translate-y-1/2">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                    <!-- Phase 1 -->
+                    <div
+                        class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm relative group hover:border-primary transition-colors">
+                        <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-6">
+                            <span class="material-icons">explore</span>
+                        </div>
+                        <div
+                            class="absolute -top-4 right-8 bg-primary/10 text-primary dark:bg-primary dark:text-white text-xs font-bold px-3 py-1 rounded-full">
+                            DAYS 1-30</div>
+                        <h3 class="text-xl font-bold mb-4 text-primary dark:text-blue-400">Phase 1: Foundation</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Build the auditory
+                            and phonetic framework required for the unique Emirati phonemes.</p>
+                        <div class="space-y-3">
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">What You'll Do:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Master the 5 unique Emirati pronunciations (Gaf, Jeem, etc.)</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Core 300 vocabulary words for professional greetings</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Cultural etiquette: The "Majlis" protocols</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div
+                        class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm relative group hover:border-primary transition-colors scale-105 shadow-xl z-20">
+                        <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-6">
+                            <span class="material-icons">forum</span>
+                        </div>
+                        <div
+                            class="absolute -top-4 right-8 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                            DAYS 31-60</div>
+                        <h3 class="text-xl font-bold mb-4 text-primary dark:text-blue-400">Phase 2: Conversational
+                            Fluency</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Transition from
+                            recognition to production with rapid-fire conversation drills.</p>
+                        <div class="space-y-3">
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">What You'll Do:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Live 1-on-1 "Coffee Shop" simulation scenarios</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Sentence chaining and connective logic mastery</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Understanding 85% of office small talk</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div
+                        class="bg-white dark:bg-slate-900 p-8 rounded-xl border border-primary/10 shadow-sm relative group hover:border-primary transition-colors">
+                        <div
+                            class="w-12 h-12 bg-accent-gold text-white rounded-lg flex items-center justify-center mb-6">
+                            <span class="material-icons">workspace_premium</span>
+                        </div>
+                        <div
+                            class="absolute -top-4 right-8 bg-accent-gold text-white text-xs font-bold px-3 py-1 rounded-full">
+                            DAYS 61-90</div>
+                        <h3 class="text-xl font-bold mb-4 text-primary dark:text-blue-400">Phase 3: Career Mastery</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 text-sm leading-relaxed">Refining your speech
+                            to mirror the nuance of a native speaker in business environments.</p>
+                        <div class="space-y-3">
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">What You'll Do:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Niche-specific vocabulary (Real Estate, Oil &amp; Gas, Finance)</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Mastering the "Emirati Wit" and local idioms</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-sm">
+                                    <span class="material-icons text-primary text-lg">check_circle</span>
+                                    <span>Final Exam: Leading a 15-minute business briefing</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Quote Section -->
+    <section class="py-12 bg-primary/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="relative bg-white dark:bg-slate-800 p-10 rounded-2xl shadow-lg border-l-4 border-accent-gold">
+                <span class="material-icons text-6xl text-primary/10 absolute top-4 left-4">format_quote</span>
+                <blockquote class="relative z-10">
+                    <p class="text-xl italic text-slate-700 dark:text-slate-200 leading-relaxed mb-6">
+                        "For an expat in the UAE, Modern Standard Arabic is a bridge, but the Emirati dialect is the key
+                        that opens the doors to true cultural integration and professional trust. You don't just learn a
+                        language; you gain a competitive advantage in the local market."
+                    </p>
+                    <footer class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                            <img alt="Nasser Isleem" class="w-full h-full object-cover"
+                                data-alt="Professional headshot of Nasser Isleem" src="nasser.jfif" />
+                        </div>
+                        <div>
+                            <div class="font-bold text-primary dark:text-blue-400">Nasser Isleem</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-widest">Arabic Linguist &amp; Pedagogy
+                                Expert</div>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-24 bg-white dark:bg-background-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Why Professionals Choose Us</h2>
+                <p class="text-slate-600 dark:text-slate-400">Traditional programs focus on academics. We focus on your
+                    career trajectory.</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th
+                                class="p-6 text-left bg-slate-50 dark:bg-slate-800/50 rounded-tl-xl border-b border-slate-100 dark:border-slate-800 text-slate-400 font-medium uppercase text-xs tracking-widest">
+                                Feature</th>
+                            <th
+                                class="p-6 text-center bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-bold">
+                                Traditional Programs</th>
+                            <th
+                                class="p-6 text-center bg-primary/5 dark:bg-primary/20 rounded-tr-xl border-b border-accent-gold/30 text-primary dark:text-blue-300 font-black relative">
+                                Al Injaz
+                                <span
+                                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-gold text-white text-[10px] py-1 px-3 rounded-full whitespace-nowrap">RECOMMENDED
+                                    FOR EXECUTIVES</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr>
+                            <td
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 font-semibold text-slate-800 dark:text-slate-200">
+                                Dialect Focus</td>
+                            <td class="p-6 border-b border-slate-100 dark:border-slate-800 text-center text-slate-500">
+                                Modern Standard Arabic (Fusha)</td>
+                            <td
+                                class="p-6 border-b border-accent-gold/20 text-center font-bold text-primary dark:text-white bg-primary/5 dark:bg-primary/10">
+                                Local Emirati (Gulf) Dialect</td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 font-semibold text-slate-800 dark:text-slate-200">
+                                Time to Fluency</td>
+                            <td class="p-6 border-b border-slate-100 dark:border-slate-800 text-center text-slate-500">
+                                12 - 24 Months</td>
+                            <td
+                                class="p-6 border-b border-accent-gold/20 text-center font-bold text-primary dark:text-white bg-primary/5 dark:bg-primary/10">
+                                90 Days Intensive</td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 font-semibold text-slate-800 dark:text-slate-200">
+                                Learning Goal</td>
+                            <td class="p-6 border-b border-slate-100 dark:border-slate-800 text-center text-slate-500">
+                                Grammar, Reading &amp; Writing</td>
+                            <td
+                                class="p-6 border-b border-accent-gold/20 text-center font-bold text-primary dark:text-white bg-primary/5 dark:bg-primary/10">
+                                Professional Speaking &amp; Cultural Nuance</td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 font-semibold text-slate-800 dark:text-slate-200">
+                                Networking Value</td>
+                            <td
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 text-center text-slate-500 italic text-xs">
+                                Low (Academic focus)</td>
+                            <td
+                                class="p-6 border-b border-accent-gold/20 text-center font-bold text-primary dark:text-white bg-primary/5 dark:bg-primary/10">
+                                High (Direct access to local networks)</td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="p-6 border-b border-slate-100 dark:border-slate-800 font-semibold text-slate-800 dark:text-slate-200">
+                                Investment Focus</td>
+                            <td class="p-6 border-b border-slate-100 dark:border-slate-800 text-center text-slate-500">
+                                Casual Hobbyist Pricing</td>
+                            <td
+                                class="p-6 border-b border-accent-gold/20 text-center font-bold text-primary dark:text-white bg-primary/5 dark:bg-primary/10">
+                                High-ROI Career Strategic Investment</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Table Footer Call to Action -->
+            <div class="mt-12 flex flex-col items-center">
+                <a href="https://tally.so/r/RGPZrl" target="_blank"
+                    class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center gap-3">
+                    Book Your Strategic Consultation
+                    <span class="material-icons">arrow_forward</span>
+                </a>
+                <p class="mt-4 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
+                    <span class="material-icons text-sm text-green-500">verified</span>
+                    Limited intake for Q3 cohort to ensure 1-on-1 mentorship.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Grid Section -->
+    <!-- Testimonial Grid Section -->
+    <section id="testimonials" class="py-24 px-4 max-w-7xl mx-auto">
+        <header class="text-center mb-16">
+            <span class="text-primary font-semibold tracking-wider uppercase text-sm mb-4 block">Proven Results</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-6">Real Careers, Transformed.
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                See how the Al Injaz program has helped professionals like you unlock new opportunities and build deeper
+                local connections.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial Image 1 -->
+            <div
+                class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 dark:border-slate-700 hover:shadow-accent-gold/20 hover:scale-105 transition-all duration-300">
+                <img src="test1.png" alt="Student Testimonial 1" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Testimonial Image 2 -->
+            <div
+                class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 dark:border-slate-700 hover:shadow-accent-gold/20 hover:scale-105 transition-all duration-300">
+                <img src="test2.png" alt="Student Testimonial 2" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Testimonial Image 3 -->
+            <div
+                class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 dark:border-slate-700 hover:shadow-accent-gold/20 hover:scale-105 transition-all duration-300">
+                <img src="test3.png" alt="Student Testimonial 3" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Testimonial Image 4 -->
+            <div
+                class="rounded-3xl overflow-hidden shadow-2xl border-2 border-slate-200 dark:border-slate-700 hover:shadow-accent-gold/20 hover:scale-105 transition-all duration-300">
+                <img src="test4.png" alt="Student Testimonial 4" class="w-auto h-full object-contain" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification Section -->
+    <section class="bg-white dark:bg-slate-900/50 py-24">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4">Is This Right for You?</h2>
+                <p class="text-slate-600 dark:text-slate-400">We only work with a limited number of high-intent
+                    professionals to ensure quality results.</p>
+            </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+                <!-- Not For You -->
+                <div class="p-12 bg-slate-50 dark:bg-slate-800/50">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div
+                            class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600">
+                            <span class="material-icons">close</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wide">Not
+                            For You</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <span class="material-icons text-red-500 flex-shrink-0">remove_circle_outline</span>
+                            <span class="text-slate-600 dark:text-slate-400 font-medium">Casual learners looking for
+                                basic "tourist" phrases or hobbyists.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-icons text-red-500 flex-shrink-0">remove_circle_outline</span>
+                            <span class="text-slate-600 dark:text-slate-400 font-medium">Individuals unable to commit to
+                                90 days of focused practice.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-icons text-red-500 flex-shrink-0">remove_circle_outline</span>
+                            <span class="text-slate-600 dark:text-slate-400 font-medium">Anyone looking for a "passive"
+                                learning experience without participation.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-icons text-red-500 flex-shrink-0">remove_circle_outline</span>
+                            <span class="text-slate-600 dark:text-slate-400 font-medium">People not currently residing
+                                in or doing business within the UAE.</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Perfect For You -->
+                <div
+                    class="p-12 bg-white dark:bg-primary/5 border-l-0 md:border-l border-slate-200 dark:border-slate-800 relative">
+                    <div class="absolute inset-0 bg-primary/5 opacity-50 pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <span class="material-icons">check</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary dark:text-white uppercase tracking-wide">Perfect
+                                For You</h3>
+                        </div>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <span class="material-icons text-primary flex-shrink-0">check_circle</span>
+                                <span class="text-slate-800 dark:text-slate-200 font-bold">UAE-based executives and
+                                    professionals seeking long-term career security.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-icons text-primary flex-shrink-0">check_circle</span>
+                                <span class="text-slate-800 dark:text-slate-200 font-bold">Those who value deep cultural
+                                    respect and nuanced communication.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-icons text-primary flex-shrink-0">check_circle</span>
+                                <span class="text-slate-800 dark:text-slate-200 font-bold">High-performers who need to
+                                    build authentic rapport with local stakeholders.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-icons text-primary flex-shrink-0">check_circle</span>
+                                <span class="text-slate-800 dark:text-slate-200 font-bold">Motivated individuals ready
+                                    to transform their professional trajectory in 90 days.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action -->
+            <div class="mt-20 text-center">
+                <a href="https://tally.so/r/RGPZrl" target="_blank"
+                    class="bg-primary text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-primary/90 shadow-xl transition-all transform hover:-translate-y-1 inline-flex items-center gap-3">
+                    Apply for the 90-Day Program
+                    <span class="material-icons">arrow_forward</span>
+                </a>
+                <p class="mt-4 text-slate-500 text-sm italic">Limited spots available for the Q3 cohort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-background-light dark:bg-background-dark">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-primary/60 dark:text-white/60">Everything you need to know about the mastery program.</p>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border border-primary/10 rounded-xl bg-white dark:bg-primary/5 overflow-hidden">
+                    <input type="checkbox" id="faq1" class="hidden" />
+                    <label for="faq1" class="flex items-center justify-between p-6 cursor-pointer select-none">
+                        <span class="font-semibold text-lg pr-4">MSA vs Dialect: What will I learn?</span>
+                        <span class="material-symbols-outlined faq-icon">expand_more</span>
+                    </label>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-primary/70 dark:text-white/70 leading-relaxed">
+                            Unlike traditional academic courses that focus on Modern Standard Arabic (MSA) used in news,
+                            we focus 100% on the Emirati Dialect. This is the language of coffee shops, boardrooms, and
+                            family gatherings in the UAE. You will learn to speak like a local, not like a textbook.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border border-primary/10 rounded-xl bg-white dark:bg-primary/5 overflow-hidden">
+                    <input type="checkbox" id="faq2" class="hidden" />
+                    <label for="faq2" class="flex items-center justify-between p-6 cursor-pointer select-none">
+                        <span class="font-semibold text-lg pr-4">What are the fluency expectations after 90 days?</span>
+                        <span class="material-symbols-outlined faq-icon">expand_more</span>
+                    </label>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-primary/70 dark:text-white/70 leading-relaxed">
+                            Our goal is "Conversational Mastery." By day 90, you will be able to handle business
+                            introductions, navigate social situations, and express complex professional needs
+                            comfortably. You won't be a poet, but you will be functionally fluent in the culture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border border-primary/10 rounded-xl bg-white dark:bg-primary/5 overflow-hidden">
+                    <input type="checkbox" id="faq3" class="hidden" />
+                    <label for="faq3" class="flex items-center justify-between p-6 cursor-pointer select-none">
+                        <span class="font-semibold text-lg pr-4">What is the required time commitment?</span>
+                        <span class="material-symbols-outlined faq-icon">expand_more</span>
+                    </label>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-primary/70 dark:text-white/70 leading-relaxed">
+                            The program is designed for busy professionals. We recommend 4-5 hours per week, split
+                            between interactive modules and two 30-minute high-impact coaching sessions. Most of our
+                            students complete the work during their morning commute or evening downtime.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border border-primary/10 rounded-xl bg-white dark:bg-primary/5 overflow-hidden">
+                    <input type="checkbox" id="faq4" class="hidden" />
+                    <label for="faq4" class="flex items-center justify-between p-6 cursor-pointer select-none">
+                        <span class="font-semibold text-lg pr-4">Do you offer refunds?</span>
+                        <span class="material-symbols-outlined faq-icon">expand_more</span>
+                    </label>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-primary/70 dark:text-white/70 leading-relaxed">
+                            Yes. We offer a "Cultural Confidence" Guarantee. If after the first 14 days you don't feel
+                            the curriculum is transforming your understanding of Emirati culture and language, we
+                            provide a full, no-questions-asked refund.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="relative bg-primary text-white py-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none"
+            style="background-image: radial-gradient(circle at 2px 2px, rgba(212,175,55,0.3) 1px, transparent 0); background-size: 40px 40px;">
+        </div>
+        <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <h2 class="text-accent uppercase tracking-[0.3em] font-bold text-sm mb-6">The Simple Truth</h2>
+            <p class="text-3xl md:text-5xl font-light mb-8 leading-tight">
+                In the UAE, those who speak the language <br class="hidden md:block" />
+                <span class="font-bold">don't just work here—they belong here.</span>
+            </p>
+            <p class="text-white/70 text-lg mb-12 max-w-2xl mx-auto">
+                Secure your career longevity and unlock a level of professional respect that only cultural mastery can
+                provide.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a class="px-10 py-4 bg-accent text-primary font-bold rounded-lg hover:bg-white transition-colors"
+                    href="https://tally.so/r/RGPZrl" target="_blank">Apply Now</a>
+                <div class="flex items-center gap-4 text-sm text-white/60">
+                    <span class="flex items-center gap-1"><span
+                            class="material-symbols-outlined text-accent text-sm">calendar_month</span> Starts Oct
+                        1st</span>
+                    <span class="w-1 h-1 bg-white/20 rounded-full"></span>
+                    <span class="flex items-center gap-1"><span
+                            class="material-symbols-outlined text-accent text-sm">verified_user</span> Limited to 25
+                        Seats</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-background-dark border-t border-primary/10 py-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="md:col-span-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="logo.png" alt="Al Injaz Logo" class="h-10 w-auto" />
+                    <span class="font-bold text-lg">AL INJAZ</span>
+                </div>
+                <p class="text-primary/60 dark:text-white/60 text-sm max-w-sm">
+                    The premium language solution for high-net-worth professionals and corporate leaders in the United
+                    Arab Emirates.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Program</h4>
+                <ul class="text-sm text-primary/60 dark:text-white/60 space-y-2">
+                    <li><a class="hover:text-accent" href="#program">Curriculum</a></li>
+                    <li><a class="hover:text-accent" href="#testimonials">Success Stories</a></li>
+                    <li><a class="hover:text-accent" href="https://tally.so/r/RGPZrl" target="_blank">Apply Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4">Connect</h4>
+                <ul class="text-sm text-primary/60 dark:text-white/60 space-y-3">
+                    <li>
+                        <a href="https://www.instagram.com/al__injaz/" target="_blank"
+                            class="flex items-center gap-2 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                            <span>@al__injaz</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:arshiyamueen@al-injaz.com"
+                            class="flex items-center gap-2 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>arshiyamueen@al-injaz.com</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-12 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary/40 dark:text-white/40">
+            <p>© 2024 Al Injaz. All rights reserved.</p>
+            <div class="flex gap-6">
+                <span>Secure Payments via Stripe</span>
+                <span>Verified UAE Business</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
